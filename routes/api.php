@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// ************************************************** SANCTUM ************************************************************//
+//Route::post("login",[\App\Http\Controllers\API\SanctumController::class,"login"]);
+//Route::post("register",[\App\Http\Controllers\API\SanctumController::class,"register"]);
+//Route::post("logout",[\App\Http\Controllers\API\SanctumController::class,"logout"])->middleware("auth:sanctum");
+
 
 Route::group(['prefix' => 'v1', 'middleware' => ['ApiGate']], function(){
     Route::post("checked",function (){
