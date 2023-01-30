@@ -22,16 +22,22 @@ Route::group(['prefix' => 'v1', 'middleware' => ['ApiGate']], function(){
 });
 
 
-Route::group(['prefix' => 'v1', 'middleware' => ['ApiGate'],'namespace' => 'API'], function(){
+Route::group(['prefix' => 'v1','namespace' => 'API'], function(){
     Route::post("register","AuthController@register");
     Route::post("login",[ 'as' => 'login', 'uses' =>"AuthController@login"]);
 
     Route::group(['middleware' => ['jwt.verify']], function(){
+
         Route::post("logout","AuthController@logout");
+        Route::post("refresh","AuthController@refresh");
         Route::post("getUser","Authcontroller@GetUser");
+
     });
 
 });
+
+
+
 Route::group(['prefix' => 'v1','middleware' => ['jwt.verify','ApiGate','CheckRole:admin'], 'namespace' => 'API']
             , function() {
     Route::group(['middleware' => 'LangSwitcher'],function (){

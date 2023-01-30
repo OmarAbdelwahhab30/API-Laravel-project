@@ -20,7 +20,7 @@ class AuthController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login','register']]);
+        //$this->middleware('auth:api', ['except' => ['login','register']]);
     }
 
 
@@ -133,6 +133,14 @@ class AuthController extends Controller
             $roles[] = $arr->name;
         }
         return $roles;
+    }
+
+    public function refresh(Request $request){
+        $new_token = JWTAuth::refresh($request->token);
+        if ($new_token){
+            return response()->json(['msg' => $new_token]);
+        }
+        return response()->json(['msg' => "error"]);
     }
 
 

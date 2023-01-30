@@ -39,8 +39,6 @@ trait ApiHandler
         ]);
     }
 
-
-
     public function returnValidationError($validator,$code = "E001")
     {
         return $this->returnError($code, $validator->errors()->first());
