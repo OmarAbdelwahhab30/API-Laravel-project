@@ -86,13 +86,8 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "api_password",
-							"value": "jbfJtIAGwkc4QCmIhf6PkyOzFDMfns2LNMRhEI5hc",
-							"type": "text"
-						},
-						{
 							"key": "email",
-							"value": "ua@gmail.com",
+							"value": "new2@gmail.com",
 							"type": "text"
 						},
 						{
@@ -140,7 +135,7 @@
 					"formdata": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NjM5Nzc5NjEsImV4cCI6MTY2Mzk4MTU2MSwibmJmIjoxNjYzOTc3OTYxLCJqdGkiOiJBVzZlYjhlVlZyU0lEbGJyIiwic3ViIjo3LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.IOWjv8siTxXpT6ICj0QU-A9v_doMwK30JCU5egwkmIw",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NzUwMzE3ODQsImV4cCI6MTY3NTAzNTM4NCwibmJmIjoxNjc1MDMxNzg0LCJqdGkiOiJVdnNNbzVEM2VhVWI2Q1hwIiwic3ViIjo0MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.b40yeDaQ0RM_TYPg45cTdysYaFSx8zKnSPHhPixKRBE",
 							"type": "text"
 						},
 						{
@@ -210,7 +205,27 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"url": "localhost:8000/api/v1/getUser"
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "api_password",
+							"value": "jbfJtIAGwkc4QCmIhf6PkyOzFDMfns2LNMRhEI5hc",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NjY2Mzg5MDcsImV4cCI6MTY2NjY0MjUwNywibmJmIjoxNjY2NjM4OTA3LCJqdGkiOiI4ZjdGREFMWWJaM09ZclQxIiwic3ViIjoyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HDvV0fj26f5SO2LWifFkCQEjvTAxxmS9QHOUu2YvVpY",
+							"type": "text"
+						},
+						{
+							"key": "lang",
+							"value": "en",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8000/api/v1/GetCategs"
 			},
 			"response": []
 		},
@@ -229,7 +244,12 @@
 						},
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NjQwNjEzMTYsImV4cCI6MTY2NDA2NDkxNiwibmJmIjoxNjY0MDYxMzE2LCJqdGkiOiJhU0xaSnloMERqUVVFZDgzIiwic3ViIjoyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.WwJfEOMI9OAhifmHpu0-fAWYJQOaUKm2zQjlElhORww",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NjY2MTIxMTQsImV4cCI6MTY2NjYxNTcxNCwibmJmIjoxNjY2NjEyMTE0LCJqdGkiOiJqaWRHZjNKc01BTUl5ZzlOIiwic3ViIjoyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jjrdhB0TiAajcKgbDPDp4bmnV3N1P9ZbPuQ-_z5yv9A",
+							"type": "text"
+						},
+						{
+							"key": "categ_id",
+							"value": "2",
 							"type": "text"
 						},
 						{
@@ -248,7 +268,32 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"url": ""
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "api_password",
+							"value": "jbfJtIAGwkc4QCmIhf6PkyOzFDMfns2LNMRhEI5hc",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NjQwNjE4NjYsImV4cCI6MTY2NDA2NTQ2NiwibmJmIjoxNjY0MDYxODY2LCJqdGkiOiI5dnBZNm9mRklzMnBuQ3dNIiwic3ViIjoyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.nYjRsP8bviRW90P7Pmuwl435pf26Gss3h8XrB-UU1oQ",
+							"type": "text"
+						},
+						{
+							"key": "name_en",
+							"value": "Games",
+							"type": "text"
+						},
+						{
+							"key": "name_ar",
+							"value": "الألعاب",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8000/api/v1/AddCateg"
 			},
 			"response": []
 		},
@@ -257,7 +302,27 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"url": ""
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "api_password",
+							"value": "jbfJtIAGwkc4QCmIhf6PkyOzFDMfns2LNMRhEI5hc",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NjY2MTIxMTQsImV4cCI6MTY2NjYxNTcxNCwibmJmIjoxNjY2NjEyMTE0LCJqdGkiOiJqaWRHZjNKc01BTUl5ZzlOIiwic3ViIjoyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jjrdhB0TiAajcKgbDPDp4bmnV3N1P9ZbPuQ-_z5yv9A",
+							"type": "text"
+						},
+						{
+							"key": "categ_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8000/api/v1/DeleteCateg"
 			},
 			"response": []
 		},
@@ -266,7 +331,56 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"url": ""
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "api_password",
+							"value": "jbfJtIAGwkc4QCmIhf6PkyOzFDMfns2LNMRhEI5hc",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NjY2MTExOTAsImV4cCI6MTY2NjYxNDc5MCwibmJmIjoxNjY2NjExMTkwLCJqdGkiOiJ3dTRJN1VoMWhNZ0lSdUZaIiwic3ViIjoyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ZKJ1MUCcjANH9sZ-mnx_O0b7b_IqKbKUznSui_9mZgI",
+							"type": "text"
+						},
+						{
+							"key": "categ_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "name_ar",
+							"value": "الألعابd",
+							"type": "text"
+						},
+						{
+							"key": "name_en",
+							"value": "gamesd",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8000/api/v1/UpdateCateg"
+			},
+			"response": []
+		},
+		{
+			"name": "refresh Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NzUwMzIxNzcsImV4cCI6MTY3NTAzNTc3NywibmJmIjoxNjc1MDMyMTc3LCJqdGkiOiJ4UFdqVXh5b1Rnek16WXEyIiwic3ViIjo0MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.kTqW4NZkutGGuPReKj-7G8OJvDq8wKUuQIPe3TX5UXk",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8000/api/v1/refresh"
 			},
 			"response": []
 		}
