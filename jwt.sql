@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 30, 2023 at 09:47 PM
+-- Generation Time: Jan 31, 2023 at 11:33 AM
 -- Server version: 8.0.21
 -- PHP Version: 7.4.9
 
@@ -20,6 +20,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `jwt`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE IF NOT EXISTS `categories` (
+  `id` int NOT NULL,
+  `name_ar` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `name_en` varchar(200) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
