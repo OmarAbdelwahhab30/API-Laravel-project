@@ -20,11 +20,13 @@ class VerifyJWT_Token
     {
         try {
             $token = $request->token;
-            if ($token) {
+            if (!empty($token)) {
                     $request->headers->set('token', (string)$token, true);
                     $request->headers->set('Authorization', 'Bearer ' . $token, true);
                     $user = JWTAuth::parseToken()->authenticate();
-            }
+                }else{
+                     return $this->returnError("",'Token is null');
+                 }
             } catch (\Exception $e) {
             if ($e instanceof \Tymon\JWTAuth\Exceptions\TokenInvalidException){
                 return $this->returnError("",'Token is Invalid');
