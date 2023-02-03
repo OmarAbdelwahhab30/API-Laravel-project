@@ -16,10 +16,10 @@ class LanguageSwitcher
     public function handle($request, Closure $next)
     {
         app()->setLocale('ar');
-
-        if(isset($request -> lang)  && $request -> lang == 'en')
+        if(isset($request -> lang)  && $request -> lang == 'en'){
             app()->setLocale('en');
-
+        }
         return $next($request);
     }
+
 }

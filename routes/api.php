@@ -43,8 +43,7 @@ Route::group(['prefix' => 'v1','namespace' => 'API'], function(){
 
 
 
-Route::group(['prefix' => 'v1','middleware' => ['jwt.verify','ApiGate','CheckRole:admin'], 'namespace' => 'API']
-            , function() {
+Route::group(['prefix' => 'v1','middleware' => ['jwt.verify','ApiGate','CheckRole:admin'], 'namespace' => 'API'],function() {
     Route::group(['middleware' => 'LangSwitcher'],function (){
         Route::post("GetCategs","CategoryController@index");
         Route::post("showCategByID","CategoryController@show");
@@ -68,3 +67,5 @@ Route::group(['prefix' => 'v1' ,'middleware' => ['ApiGate','jwt.verify']],functi
         return "Token is Valid";
     });
 });
+
+Route::post("uploadimage","ImageController@uploadimage");
